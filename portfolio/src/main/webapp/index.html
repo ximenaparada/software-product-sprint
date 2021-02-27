@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style>
+        body {
+        background-color:powderblue;
+        }
+
+        h1 {
+        color: white;
+        font-family: "Lucida Console", "Courier New", monospace;
+        text-align: center;
+        }
+
+        p {
+        color: whitesmoke;
+        font-family: "Lucida Console", "Courier New", monospace;
+        font-size: 20px;
+        }
+        
+    </style>
     <meta charset="UTF-8">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
@@ -8,12 +26,21 @@
   </head>
   <body>
     <div id="content">
-      <h1>My Portfolio</h1>
+      <h1>Ximena's Portfolio</h1>
       <p>This is my portfolio.</p>
+      <p>I am a student majoring in CS at UTEP. My hobbies include baking, reading and hiking.</p>
+      <p>This is Bom, my pet turtle!</p>
+      <img src="/images/Bom_img1.JPG" alt="My turtle Bom: 1/4 yr old Red Eared-Slider, blue eyed." width="512" height="359"/>
+      
       <p>Click <a href="/hello">here</a> to see content created by server code.</p>
       <p>Click here to get a random message:</p>
       <button onclick="addRandomGreeting()">Hello</button>
       <div id="greeting-container"></div>
+
+      <p>Click <a href="/Quote">here</a> to see content created by server code.</p>
+      <p>Click here to get a random quote:</p>
+      <button onclick="addRandomQuote()">Quote</button>
+      <div id="quote-container"></div>
     </div>
   </body>
 </html>

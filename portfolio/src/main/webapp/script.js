@@ -26,3 +26,18 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+/**
+ * Adds a random quote to the page.
+ */
+function addRandomQuote() {
+  const quotes =
+      ['You got no jams!', 'Stobp it!', 'My goal is to live a healthy life and die in a natural way.', 'Food before family.'];
+
+  // Pick a random quote.
+  const quote = quotes[Math.floor(Math.random() * quotes.length)];
+
+  // Add it to the page.
+  const quoteContainer = document.getElementById('quote-container');
+  quoteContainer.innerText = quote;
+}
