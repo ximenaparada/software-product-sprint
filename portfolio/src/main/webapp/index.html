@@ -24,14 +24,34 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
+
+  <!-- Page Content -->
   <body>
+    <!-- Navegation Bar -->
+    <!-- Trying to make a nice looking nav. bar
+    <div class="w3-padding-32">
+        <div class="nav-bar">
+            <a href="#" class="w3-bar-item w3-button">Home</a>
+            <a href="#" class="w3-bar-item w3-button w3-light-grey">Portfolio</a>
+            <a href="#" class="w3-bar-item w3-button">Contact</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small">Weddings</a>
+        </div>
+    </div>
+    -->
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#aboutme">About me</a></li>
+    </ul>
+    
     <div id="content">
       <h1>Ximena's Portfolio</h1>
       <p>This is my portfolio.</p>
       <p>I am a student majoring in CS at UTEP. My hobbies include baking, reading and hiking.</p>
       <p>This is Bom, my pet turtle!</p>
       <img src="/images/Bom_img1.JPG" alt="My turtle Bom: 1/4 yr old Red Eared-Slider, blue eyed." width="512" height="359"/>
-      
+  
       <p>Click <a href="/hello">here</a> to see content created by server code.</p>
       <p>Click here to get a random message:</p>
       <button onclick="addRandomGreeting()">Hello</button>
@@ -41,6 +61,7 @@
       <p>Click here to get a random quote:</p>
       <button onclick="addRandomQuote()">Quote</button>
       <div id="quote-container"></div>
+    
     </div>
   </body>
 </html>
