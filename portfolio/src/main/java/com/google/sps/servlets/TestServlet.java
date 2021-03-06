@@ -14,10 +14,10 @@ public class TestServlet extends HttpServlet {
     visits++;
 
     response.setContentType("text/html;");
-    response.getWriter().println("<h1>Hello world!</h1>");
+    response.getWriter().println("Hello wonderful human!");
     if(visits % 10 == 0){
-        response.getWriter().println("<p>Congratulations, you are the " + visits + " person to visit this site!");
+        response.getWriter().println("Congratulations, you are the " + visits + " person to visit this site!");
     }
-    response.getWriter().println("<p>This page has been visited " + visits + " times.</p>");
+    response.getWriter().println("This page has been visited " + visits + " times.");
   }
 }

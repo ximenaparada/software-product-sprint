@@ -41,3 +41,12 @@ function addRandomQuote() {
   const quoteContainer = document.getElementById('quote-container');
   quoteContainer.innerText = quote;
 }
+
+  // Server Date fetch()
+async function showTimesClicked() {
+  const responseFromServer = await fetch('/test_servlet');
+  const textFromResponse = await responseFromServer.text();
+
+  const dateContainer = document.getElementById('button-container');
+  dateContainer.innerText = textFromResponse;
+}
