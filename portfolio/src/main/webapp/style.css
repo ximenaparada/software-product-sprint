@@ -7,3 +7,76 @@
 #greeting-container {
   margin-top: 20px;
 }
+
+body {
+background-color:whitesmoke;
+}
+
+h1 {
+    color: black;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+}
+
+p {
+    color: midnightblue;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover{
+  background-color: #111;
+}
+
+.active{
+  background-color: rgb(187, 176, 176);
+}
+/*
+.nav-bar a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  background-color: #333;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 5px;
+}
+
+/* Change the color of links on mouse-over */
+/*
+.pill-nav a:hover {
+  background-color: #111;
+  color: white;
+}
+
+/* Add a color to the active/current link */
+/*
+.pill-nav a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+*/
+/*
+.w3-row-padding img {margin-bottom: 12px}
+*/
