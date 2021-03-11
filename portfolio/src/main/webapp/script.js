@@ -15,6 +15,7 @@
 /**
  * Adds a random greeting to the page.
  */
+/**
 function addRandomGreeting() {
   const greetings =
       ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
@@ -26,10 +27,11 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+*/
 
 /**
  * Adds a random quote to the page.
- */
+
 function addRandomQuote() {
   const quotes =
       ['You got no jams!', 'Stobp it!', 'My goal is to live a healthy life and die in a natural way.', 'Food before family.'];
@@ -41,6 +43,7 @@ function addRandomQuote() {
   const quoteContainer = document.getElementById('quote-container');
   quoteContainer.innerText = quote;
 }
+*/
 
   // Server Date fetch()
 async function showTimesClicked() {
@@ -49,4 +52,18 @@ async function showTimesClicked() {
 
   const dateContainer = document.getElementById('button-container');
   dateContainer.innerText = textFromResponse;
+}
+
+async function getRandomFact() {
+  const responseFromServer = await fetch('/get-facts');
+  const stats = await responseFromServer.json();
+  const facts =
+      ['I love learning things in general. Especially becoming good at them.', 'My first time flying alone had me stuck at an airport for 8+ hours.', 'I love traveling. I once stayed 3 weeks in S. Korea with my younger sister, learning the language and culture.', 'I can eat almost anything, but its rather hard for me to find something I truly enjoy.'];
+
+  // Pick a random fact
+  const fact = facts[Math.floor(Math.random() * facts.length)];
+
+  // Add it to the page.
+  const quoteContainer = document.getElementById('quote-container');
+  quoteContainer.innerText = fact;
 }
