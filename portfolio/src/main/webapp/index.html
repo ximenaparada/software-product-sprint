@@ -8,7 +8,7 @@
   </head>
 
   <!-- Page Content -->
-  <body onload="showTimesClicked()">
+  <body onload="getServerFacts()">
     <!-- Navegation Bar -->
     <!-- Trying to make a nice looking nav. bar
     <div class="w3-padding-32">
@@ -33,29 +33,29 @@
       <p>I am a student majoring in CS at UTEP. My hobbies include baking, reading and hiking.</p>
       <p>This is Bom, my pet turtle!</p>
       <img src="/images/Bom_img1.JPG" alt="My turtle Bom: 1/4 yr old Red Eared-Slider, blue eyed." width="512" height="359"/>
+      
+      <div id="fact-box"> 
+        <div id="fact-container"> </div>
+        <button onclick="getServerFacts()"> More Facts </button>
+      </div>
 
+      <!--
       <p>Click here to get a random message:</p>
       <button onclick="addRandomGreeting()">Hello</button>
       <div id="greeting-container"></div>
-
+    
+      
       <p>Click here to get a random quote:</p>
       <button onclick="addRandomQuote()">Quote</button>
       <div id="quote-container"></div>
     
       <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <!--<p>Click <a href="/test_servlet">here</a> to see your visitor number.</p>
-      -->
+      
+      <p>Click <a href="/visits_servlet">here</a> to see your visitor number.</p>
+      --> 
       <p id="button-container"></p>
-         
+        
     </div>
 
-    <!--
-    <p>Click this button and see what happens.</p>
-    <button onclick="showTimesClicked();">
-      Button
-    </button>
-    <p id="button-container"></p>
-    <p>Click <a href="/test_servlet">here</a> to see the server response directly.</p>
-    -->
   </body>
 </html>

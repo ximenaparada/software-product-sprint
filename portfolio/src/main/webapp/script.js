@@ -45,9 +45,9 @@ function addRandomQuote() {
 }
 */
 
-  // Server Date fetch()
+// Server Visited Times fetch()
 async function showTimesClicked() {
-  const responseFromServer = await fetch('/test_servlet');
+  const responseFromServer = await fetch('/visits_servlet');
   const textFromResponse = await responseFromServer.text();
 
   const dateContainer = document.getElementById('button-container');
@@ -66,4 +66,20 @@ async function getRandomFact() {
   // Add it to the page.
   const quoteContainer = document.getElementById('quote-container');
   quoteContainer.innerText = fact;
+}
+
+/** Fetches stats from the server and adds them to the page. */
+async function getServerFacts() {
+  const responseFromServer = await fetch('/facts_servlet');
+  // The json() function returns an object that contains fields that we can
+  // reference to create HTML.
+  const facts = await responseFromServer.json();
+
+// Pick a random fact
+  const fact = facts[Math.floor(Math.random() * facts.length)];
+
+  // Add it to the page.
+  const quoteContainer = document.getElementById('fact-container');
+  quoteContainer.innerText = fact;
+
 }

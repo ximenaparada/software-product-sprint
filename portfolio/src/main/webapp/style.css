@@ -8,6 +8,13 @@
   margin-top: 20px;
 }
 
+#fact-container {
+  align: center;
+  color: black;
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-align: center;
+}
+
 body {
 background-color:whitesmoke;
 }
