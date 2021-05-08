@@ -9,7 +9,7 @@
 }
 
 #fact-container {
-  align: center;
+  text-align: center;
   color: black;
   font-family: "Lucida Console", "Courier New", monospace;
   text-align: center;
@@ -26,7 +26,7 @@ h1 {
 }
 
 p {
-    color: midnightblue;
+    color: black;
     font-family: "Lucida Console", "Courier New", monospace;
     font-size: 20px;
 }
