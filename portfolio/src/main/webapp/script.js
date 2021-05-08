@@ -15,6 +15,7 @@
 /**
  * Adds a random greeting to the page.
  */
+/**
 function addRandomGreeting() {
   const greetings =
       ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
@@ -25,4 +26,60 @@ function addRandomGreeting() {
   // Add it to the page.
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
+}
+*/
+
+/**
+ * Adds a random quote to the page.
+
+function addRandomQuote() {
+  const quotes =
+      ['You got no jams!', 'Stobp it!', 'My goal is to live a healthy life and die in a natural way.', 'Food before family.'];
+
+  // Pick a random quote.
+  const quote = quotes[Math.floor(Math.random() * quotes.length)];
+
+  // Add it to the page.
+  const quoteContainer = document.getElementById('quote-container');
+  quoteContainer.innerText = quote;
+}
+*/
+
+// Server Visited Times fetch()
+async function showTimesClicked() {
+  const responseFromServer = await fetch('/visits_servlet');
+  const textFromResponse = await responseFromServer.text();
+
+  const dateContainer = document.getElementById('button-container');
+  dateContainer.innerText = textFromResponse;
+}
+
+async function getRandomFact() {
+  const responseFromServer = await fetch('/get-facts');
+  const stats = await responseFromServer.json();
+  const facts =
+      ['I love learning things in general. Especially becoming good at them.', 'My first time flying alone had me stuck at an airport for 8+ hours.', 'I love traveling. I once stayed 3 weeks in S. Korea with my younger sister, learning the language and culture.', 'I can eat almost anything, but its rather hard for me to find something I truly enjoy.'];
+
+  // Pick a random fact
+  const fact = facts[Math.floor(Math.random() * facts.length)];
+
+  // Add it to the page.
+  const quoteContainer = document.getElementById('quote-container');
+  quoteContainer.innerText = fact;
+}
+
+/** Fetches stats from the server and adds them to the page. */
+async function getServerFacts() {
+  const responseFromServer = await fetch('/facts_servlet');
+  // The json() function returns an object that contains fields that we can
+  // reference to create HTML.
+  const facts = await responseFromServer.json();
+
+// Pick a random fact
+  const fact = facts[Math.floor(Math.random() * facts.length)];
+
+  // Add it to the page.
+  const quoteContainer = document.getElementById('fact-container');
+  quoteContainer.innerText = fact;
+
 }
